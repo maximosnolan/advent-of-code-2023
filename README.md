@@ -22,5 +22,5 @@ I've given them all point values based on how much I want to learn them, see the
 |day   | language   | part 1  | part 2  | notes  |
 |---|---|---|---|---|
 | 1  | C++   | Y  | Y  | I forgot how much file input sucks in c++ :(  There are some really cool string algorithms though that I was about to make by hand but found out they actually exist! std::find and std::rfind.  |
-|   |   |   |   |   |
+| 2  | Rust  | Y | Y  | Input parsing is legit half this challenge but it's a good way to learn a language. Rust seems really cool and this was my first time really writing it. Needed a lot of hand holding from the interbut ideally I can do this on my own someday TM |
 |   |   |   |   |   |
