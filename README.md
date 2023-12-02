@@ -14,6 +14,10 @@ I'll be randomly selecting a language every day from the pool below:
 + Typescript 
 + Rust 
 + Java 
++ ocaml
++ PHP 
+
+I've given them all point values based on how much I want to learn them, see the python script for how I've selected the langauges 
 
 |day   | language   | part 1  | part 2  | notes  |
 |---|---|---|---|---|
