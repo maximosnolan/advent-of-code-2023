@@ -23,4 +23,4 @@ I've given them all point values based on how much I want to learn them, see the
 |---|---|---|---|---|
 | 1  | C++   | Y  | Y  | I forgot how much file input sucks in c++ :(  There are some really cool string algorithms though that I was about to make by hand but found out they actually exist! std::find and std::rfind.  |
 | 2  | Rust  | Y | Y  | Input parsing is legit half this challenge but it's a good way to learn a language. Rust seems really cool and this was my first time really writing it. Needed a lot of hand holding from the interbut ideally I can do this on my own someday TM |
-|   |   |   |   |   |
+| 3  | Golang  |Y| Y  | All I get is a map and vector! Nothing else! This language is trying to be a modern version of C and it kinda works... C doesn't have that much and neither does go. Compiler freaks out if you try to compare an int and int32. Wanted to use gofuncs a lot more but did not have opportunity to here   |
