@@ -11,7 +11,7 @@ func isSymbol(c rune) bool {
 	return !unicode.IsDigit(c) && c != '.'
 }
 
-func getNum(i, j int, input [][]rune, visited [][]bool, num, iter int32) int32 {
+func getNum(i, j int, input [][]rune, visited [][]bool) int32 {
 	// go all the way to the left until number ends
 	if i < 0 || j < 0 || i >= len(input) || j >= len(input[0]) {
 		return 0
@@ -37,11 +37,9 @@ func getNum(i, j int, input [][]rune, visited [][]bool, num, iter int32) int32 {
 			solution *= 10
 			solution += int32(input[i][x] - '0')
 		} else {
-			fmt.Println("NUM ", solution)
 			return solution
 		}
 	}
-	fmt.Println("NUM ", solution)
 	return solution
 }
 
@@ -76,17 +74,15 @@ func main() {
 	for i := range input {
 		for j := range input[i] {
 			if isSymbol(input[i][j]) {
-				fmt.Println("line ", i, " ", j, " is symbol")
-				solution += int(getNum(i-1, j-1, input, visited, 0, 0))
-				solution += int(getNum(i+1, j+1, input, visited, 0, 0))
-				solution += int(getNum(i+1, j-1, input, visited, 0, 0))
-				solution += int(getNum(i+1, j, input, visited, 0, 0))
-				solution += int(getNum(i, j+1, input, visited, 0, 0))
-				solution += int(getNum(i, j-1, input, visited, 0, 0))
-				solution += int(getNum(i-1, j+1, input, visited, 0, 0))
-				solution += int(getNum(i-1, j, input, visited, 0, 0))
+				solution += int(getNum(i-1, j-1, input, visited))
+				solution += int(getNum(i+1, j+1, input, visited))
+				solution += int(getNum(i+1, j-1, input, visited))
+				solution += int(getNum(i+1, j, input, visited))
+				solution += int(getNum(i, j+1, input, visited))
+				solution += int(getNum(i, j-1, input, visited))
+				solution += int(getNum(i-1, j+1, input, visited))
+				solution += int(getNum(i-1, j, input, visited))
 			}
-			//fmt.Printf("%c ", input[i][j])
 		}
 		fmt.Println()
 	}
