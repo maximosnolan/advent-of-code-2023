@@ -11,27 +11,24 @@ func isSymbol(c rune) bool {
 	return !unicode.IsDigit(c) && c != '.'
 }
 
+
 func getNum(i, j int, input [][]rune, visited [][]bool) int32 {
 	// go all the way to the left until number ends
-	if i < 0 || j < 0 || i >= len(input) || j >= len(input[0]) {
-		return 0
-	}
-	if visited[i][j] || !unicode.IsDigit(input[i][j]) {
+	if j < 0 || j >= len(input[0]) || visited[i][j] || !unicode.IsDigit(input[i][j]) {
 		return 0
 	}
 
-	var startPoint int
+	var startPoint int32 
 	for x := j; x >= 0; x -= 1 {
 		visited[i][x] = true
-		//fmt.Println("currently at ", input[i][x]-'0')
 		if !unicode.IsDigit(input[i][x]) {
-			startPoint = x + 1
+			startPoint = int32(x + 1)
 			break
 		}
 	}
 
 	var solution int32
-	for x := startPoint; x < len(input[0]); x += 1 {
+	for x := startPoint; x < int32(len(input[0])); x += 1 {
 		visited[i][x] = true
 		if unicode.IsDigit(input[i][x]) {
 			solution *= 10
