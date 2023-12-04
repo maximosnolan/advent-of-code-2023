@@ -30,7 +30,7 @@ I've given them all point values based on how much I want to learn them, see the
 ### Language Tier list 
 
 After using these languages to solve these problems, here is a ranking list!!! 
-| S   | C++ 17 |   |   |   |
+| S | C++ 17 |   |   |   |
 |---|---|---|---|---|
 | A | C++ 11  | Golang  |   |   |
 | B  | Rust | Python  |   |   |
